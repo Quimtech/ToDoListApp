@@ -20,9 +20,3 @@ Este archivo contiene los pasos necesarios para clonar y ejecutar el proyecto `T
    - Con el proyecto abierto, presiona la tecla **`F5`** en tu teclado para iniciar la depuración.
    - Alternativamente, puedes hacer clic en el botón **"Iniciar"** en la parte superior de la ventana de Visual Studio.
 
-¡Eso es todo! Ahora deberías poder ver y trabajar con el proyecto `ToDoListApp` en tu entorno de desarrollo. Si tienes algún problema o pregunta, no dudes en abrir un issue en el repositorio.
-
-## Contacto
-
-Para cualquier consulta adicional, puedes contactar al equipo de desarrollo a través del repositorio [Quimtech/ToDoListApp](https://github.com/Quimtech/ToDoListApp).
-
