@@ -38,27 +38,27 @@ namespace ToDoListApp
         }
 
         // Metodo para marcar una tarea como completada
-        public void MarcarTareaComoCompleta(int indice)
+        public bool MarcarTareaComoCompleta(int indice)
         {
             if (indice < 0 || indice >= tareas.Count)
             {
-                Console.WriteLine("Número de tarea inválido.");
-                return;
+                return false;
             }
 
             tareas[indice].EstaCompleta = true;
+            return true;
         }
 
         // Metodo para eliminar una tarea
-        public void EliminarTarea(int indice)
+        public bool EliminarTarea(int indice)
         {
             if (indice < 0 || indice >= tareas.Count)
             {
-                Console.WriteLine("Número de tarea inválido.");
-                return;
+                return false;
             }
 
             tareas.RemoveAt(indice);
+            return true;
         }
     }
 }

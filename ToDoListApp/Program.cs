@@ -57,8 +57,15 @@ namespace ToDoListApp
                             int indiceCompletar = int.Parse(Console.ReadLine()) - 1;
                             try
                             {
-                                gestorDeTareas.MarcarTareaComoCompleta(indiceCompletar);
-                                Console.WriteLine("Tarea marcada como completada.");
+                                bool exitoCompleta = gestorDeTareas.MarcarTareaComoCompleta(indiceCompletar);
+                                if (exitoCompleta)
+                                {
+                                    Console.WriteLine("Tarea marcada como completada.");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Número de tarea inválido.");
+                                }
                             }
                             catch (Exception ex)
                             {
@@ -76,12 +83,19 @@ namespace ToDoListApp
                             int indiceEliminar = int.Parse(Console.ReadLine()) - 1;
                             try
                             {
-                                gestorDeTareas.EliminarTarea(indiceEliminar);
-                                Console.WriteLine("Tarea eliminada.");
+                                bool exito = gestorDeTareas.EliminarTarea(indiceEliminar);
+                                if (exito)
+                                {
+                                    Console.WriteLine("Tarea eliminada.");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Número de tarea inválido.");
+                                }
                             }
                             catch (Exception ex)
                             {
-                                Console.WriteLine($"Error al eliminar la tarea: {ex.Message}");
+                                Console.WriteLine($"Se produjo un error: {ex.Message}");
                             }
                             Console.WriteLine("Presione una tecla para volver al menú...");
                             Console.ReadKey();
